@@ -21,9 +21,9 @@ export default function GetInTouch() {
       style={{ fontFamily: "'Graphik', sans-serif" }}
     >
       <FadeInSection onShow={() => setStartAnim(true)}>
-        <div className="max-w-6xl w-full rounded-xl bg-[#111111] px-8 py-20 text-center text-teal-400">
+        <div className="max-w-6xl w-full rounded-xl px-8 py-20 text-center text-teal-400">
           <motion.h2
-            className="text-[3.5rem] font-extrabold mb-12"
+            className="text-[3.5rem] font-extrabold mb-12 text-cyan-400 drop-shadow-[0_0_10px_rgba(0,255,255,0.4)]"
             style={{ lineHeight: 1.1 }}
             variants={fadeVariants}
             initial="hidden"
@@ -45,7 +45,10 @@ export default function GetInTouch() {
             project, ask a question, or just say hello, feel free to get in touch.
           </motion.p>
 
-          <HeroButton href="#projects">raahimtaimain@gmail.com</HeroButton>
+          <div className="flex justify-center">
+  <HeroButton href="#projects">raahimtaimain@gmail.com</HeroButton>
+</div>
+
 
         </div>
       </FadeInSection>

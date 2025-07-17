@@ -46,7 +46,7 @@ export default function ProjectCard({ title, imageUrl, link }) {
             hover: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="absolute bottom-2 left-3 text-sm text-teal-400 font-semibold pointer-events-none"
+          className="absolute bottom-2 left-3 text-sm text-cyan-400 drop-shadow-[0_0_10px_rgba(0,255,255,0.4)] font-semibold pointer-events-none"
         >
           {title}
         </motion.p>

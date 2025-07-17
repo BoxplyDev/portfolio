@@ -25,9 +25,9 @@ export default function ToolsSection() {
   return (
     <section className="py-20 bg-transparent text-white flex justify-center">
       <FadeInSection full onShow={() => setStartAnim(true)}>
-        <div className="max-w-6xl w-full rounded-xl bg-[#111111] px-8 py-12 text-center">
+        <div className="max-w-6xl w-full rounded-xl px-8 py-12 text-center">
           <motion.h2
-            className="text-5xl font-bold mb-10 text-teal-400"
+            className="text-5xl font-bold mb-10 text-cyan-400 drop-shadow-[0_0_10px_rgba(0,255,255,0.4)]"
             variants={fadeVariants}
             initial="hidden"
             animate={startAnim ? "visible" : "hidden"}

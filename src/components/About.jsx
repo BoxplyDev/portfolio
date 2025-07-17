@@ -3,10 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
-export default function About() {
-  const [startTyping, setStartTyping] = useState(false);
-
-  const fadeVariants = {
+const fadeVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i = 0) => ({
       opacity: 1,
@@ -15,14 +12,17 @@ export default function About() {
     }),
   };
 
+export default function About() {
+  const [startTyping, setStartTyping] = useState(false);
+
   return (
     <section className="px-6 py-20 flex justify-center items-start">
       <FadeInSection onShow={() => setStartTyping(true)}>
-        <div className="bg-[#111111] max-w-6xl w-full rounded-xl px-8 py-12 shadow-md text-white">
-          <h1 className="text-5xl font-bold mb-10 leading-tight min-h-[6rem]">
+        <div className="max-w-6xl w-full rounded-xl px-8 py-12 text-white">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-10 leading-tight min-h-[6rem] text-cyan-400 drop-shadow-[0_0_10px_rgba(0,255,255,0.4)]">
             {startTyping ? (
               <Typewriter
-                words={["Hi, I’m Raahim — a game & front-end developer."]}
+                words={["I’m Raahim — a game & front-end developer."]}
                 cursor
                 cursorStyle="|"
                 typeSpeed={30}
@@ -31,7 +31,7 @@ export default function About() {
                 loop={1}
               />
             ) : (
-              // placeholder to prevent layout shift
+              
               <span style={{ visibility: "hidden" }}>
                 I’m Raahim — a developer obsessed with bringing ideas to life.
               </span>
@@ -45,7 +45,7 @@ export default function About() {
           ].map((text, i) => (
             <motion.p
               key={i}
-              className="text-lg text-gray-300 leading-relaxed mb-6"
+              className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6"
               variants={fadeVariants}
               initial="hidden"
               animate={startTyping ? "visible" : "hidden"}

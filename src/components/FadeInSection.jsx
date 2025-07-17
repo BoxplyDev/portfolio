@@ -29,7 +29,7 @@ export default function FadeInSection({ children, delay = 0, onShow }) {
       if (fullyVisible) {
         if (!show) {
           setShow(true);
-          if (onShow) onShow();  // trigger callback once
+          if (onShow) onShow(); 
         }
         return;
       }
@@ -52,7 +52,7 @@ export default function FadeInSection({ children, delay = 0, onShow }) {
       animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.8, delay, ease: "easeOut" }}
       style={{ position: "relative", willChange: "transform, opacity" }}
-      className="bg-[#111111] max-w-6xl w-full rounded-xl px-8 py-12 shadow-md"
+      className="max-w-6xl w-full rounded-xl px-8 py-12"
     >
       {children}
     </motion.div>
