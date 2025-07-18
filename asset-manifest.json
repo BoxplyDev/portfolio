@@ -1,19 +1,23 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.10391f5d.css",
-    "main.js": "/portfolio/static/js/main.f1ffabec.js",
+    "main.js": "/portfolio/static/js/main.712d1a1a.js",
     "static/media/GOKUTHUMBNAILHORROR4.png": "/portfolio/static/media/GOKUTHUMBNAILHORROR4.ae35410f6bd5dfa7d7f5.png",
+    "static/media/PhysicsVideo.png": "/portfolio/static/media/PhysicsVideo.3a8f6d4ffac2bb7ee1c1.png",
     "static/media/GOKUCHASE.png": "/portfolio/static/media/GOKUCHASE.86d9b7006398e63b5291.png",
     "static/media/orbitalthumbnail.png": "/portfolio/static/media/orbitalthumbnail.63008cc4cd084ef2b70f.png",
+    "static/media/OrbitalChaos3D.png": "/portfolio/static/media/OrbitalChaos3D.3de682e081078262583e.png",
+    "static/media/Tristangular.png": "/portfolio/static/media/Tristangular.1b713e5c1fc5d4a07877.png",
     "static/media/karlson_pic_drop_thumbnail.jpg": "/portfolio/static/media/karlson_pic_drop_thumbnail.4c8b84c1d324a6996942.jpg",
+    "static/media/BowlingBowl.png": "/portfolio/static/media/BowlingBowl.7cc4e9a4fba4efae75fc.png",
     "static/media/OrbitalChaos.png": "/portfolio/static/media/OrbitalChaos.7ca7e8256cf55a786e6c.png",
     "static/media/unity-game-engine-icon.png": "/portfolio/static/media/unity-game-engine-icon.88b5bd030daf194bfec5.png",
     "index.html": "/portfolio/index.html",
     "main.10391f5d.css.map": "/portfolio/static/css/main.10391f5d.css.map",
-    "main.f1ffabec.js.map": "/portfolio/static/js/main.f1ffabec.js.map"
+    "main.712d1a1a.js.map": "/portfolio/static/js/main.712d1a1a.js.map"
   },
   "entrypoints": [
     "static/css/main.10391f5d.css",
-    "static/js/main.f1ffabec.js"
+    "static/js/main.712d1a1a.js"
   ]
 }
