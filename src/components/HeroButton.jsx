@@ -2,17 +2,16 @@ import { motion } from "framer-motion";
 
 export default function HeroButton({ href, children }) {
   const handleClick = (e) => {
-    e.preventDefault(); // prevent default jump
+    if (href.startsWith("#")) {
+      e.preventDefault();
 
     const targetId = href.replace("#", "");
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop,
-        behavior: "smooth",
-      });
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  };
+  }
+};
 
   return (
     <motion.a

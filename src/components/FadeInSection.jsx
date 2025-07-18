@@ -8,42 +8,46 @@ export default function FadeInSection({ children, delay = 0, onShow }) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    // If on mobile/small screen, just show immediately
-    if (window.innerWidth < 768) {
-      if (!show) {
+  if (window.innerWidth < 768) {
+    if (!show) {
+      setShow(true);
+      if (onShow) onShow();
+    }
+    return;
+  }
+
+  function checkVisibility() {
+    if (!ref.current) return;
+    const rect = ref.current.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+    const elementHeight = rect.height;
+
+    if (elementHeight <= windowHeight) {
+      const fullyVisible = visibleHeight / elementHeight >= 0.95;
+      if (fullyVisible && !show) {
         setShow(true);
         if (onShow) onShow();
+      } else if (scrollDir === "up" && rect.top > windowHeight) {
+        setShow(false);
       }
-      return; // skip adding scroll listeners on mobile
-    }
-
-    function checkVisibility() {
-      if (!ref.current) return;
-      const rect = ref.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
-      const elementHeight = rect.height;
-      const fullyVisible = visibleHeight / elementHeight >= 0.95;
-
-      if (fullyVisible) {
-        if (!show) {
-          setShow(true);
-          if (onShow) onShow(); 
-        }
-        return;
-      }
-
-      if (scrollDir === "up" && rect.top > windowHeight) {
+    } else {
+      const partiallyVisible = visibleHeight / windowHeight >= 0.6;
+      if (partiallyVisible && !show) {
+        setShow(true);
+        if (onShow) onShow();
+      } else if (scrollDir === "up" && rect.top > windowHeight) {
         setShow(false);
       }
     }
+  }
 
-    checkVisibility();
+  checkVisibility();
+  window.addEventListener("scroll", checkVisibility, { passive: true });
+  return () => window.removeEventListener("scroll", checkVisibility);
+}, [scrollDir, onShow, show]);
 
-    window.addEventListener("scroll", checkVisibility, { passive: true });
-    return () => window.removeEventListener("scroll", checkVisibility);
-  }, [scrollDir, onShow, show]);
 
   return (
     <motion.div

@@ -46,8 +46,8 @@ export default function GetInTouch() {
           </motion.p>
 
           <div className="flex justify-center">
-  <HeroButton href="#projects">raahimtaimain@gmail.com</HeroButton>
-</div>
+            <HeroButton href="mailto:raahimtaimain@gmail.com?subject=Let's%20Talk&body=Hi%20Raahim,%0D%0A%0D%0AI saw your portfolio and...">raahimtaimain@gmail.com</HeroButton>
+          </div>
 
 
         </div>

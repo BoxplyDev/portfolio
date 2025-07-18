@@ -34,7 +34,7 @@ export default function Hero() {
   }, [engineReady]);
 
   return (
-    <>
+    <section className="relative h-screen w-full flex items-center justify-center bg-[#1a1a1a] overflow-hidden">
       {engineReady && (
         <Particles
   id="tsparticles"
@@ -147,6 +147,6 @@ export default function Hero() {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </section>
   );
 }

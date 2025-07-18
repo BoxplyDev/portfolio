@@ -9,6 +9,10 @@ import GokuChase from "../assets/thumbnails/GOKUCHASE.png";
 import OrbitalChaos from "../assets/thumbnails/OrbitalChaos.png";
 import OrbitalThumbnail from "../assets/thumbnails/orbitalthumbnail.png";
 import KarlsonTutorialThumbnail from "../assets/thumbnails/karlson_pic_drop_thumbnail.jpg";
+import Tristangular from "../assets/thumbnails/Tristangular.png"
+import BowlingBowl from "../assets/thumbnails/BowlingBowl.png"
+import OrbitalChaos3D from "../assets/thumbnails/OrbitalChaos3D.png"
+import PhysicsThumbnail from "../assets/thumbnails/PhysicsVideo.png"
 
 const allProjects = [
   {
@@ -46,6 +50,34 @@ const allProjects = [
     imageUrl: KarlsonTutorialThumbnail,
     link: "https://www.youtube.com/watch?v=saMBLw-JdHU",
   },
+  {
+    id: 6,
+    title: "Tristangular [Windows]",
+    category: "Games",
+    imageUrl: Tristangular,
+    link: "https://boxply-dev.itch.io/tristangular-windows"
+  },
+  {
+    id: 7,
+    title: "Bowling Bowl",
+    category: "Games",
+    imageUrl: BowlingBowl,
+    link: "https://boxply-dev.itch.io/bowling-bowl"
+  },
+  {
+    id: 8,
+    title: "Orbital Chaos 3D",
+    category: "Games",
+    imageUrl: OrbitalChaos3D,
+    link: "https://boxply-dev.itch.io/orbital-chaos-3d"
+  },
+  {
+    id: 9,
+    title: "Unity 3D Physics Tutorial",
+    category: "Video",
+    imageUrl: PhysicsThumbnail,
+    link: "https://www.youtube.com/watch?v=BilYkuGucdA"
+  }
 ];
 
 const categories = ["All", "Video", "Games"];
@@ -104,19 +136,23 @@ export default function Projects() {
           </nav>
 
           {/* Grid of Projects */}
-          <div className="grid md:grid-cols-3 gap-10 justify-items-center">
+          <div
+            key={activeCategory + (startAnim ? "_visible" : "_hidden")}
+            className="grid md:grid-cols-3 gap-10 justify-items-center"
+          >
             {filteredProjects.map((project, i) => (
-              <motion.div
-                key={project.id}
-                variants={fadeVariants}
-                initial="hidden"
-                animate={startAnim ? "visible" : "hidden"}
-                custom={i}
-              >
-                <ProjectCard {...project} />
-              </motion.div>
-            ))}
-          </div>
+            <motion.div
+              key={project.id}
+              variants={fadeVariants}
+              initial="hidden"
+              animate={startAnim ? "visible" : "hidden"}
+              custom={i}
+            >
+              <ProjectCard {...project} />
+            </motion.div>
+          ))}
+        </div>
+
         </div>
       </FadeInSection>
     </section>
