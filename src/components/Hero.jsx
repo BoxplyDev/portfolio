@@ -142,7 +142,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 1 }}
             >
-              A developer who blends creativity and code to build smooth digital experiences.
+              A developer who codes with creativity and builds with vision.
             </motion.p>
           </motion.div>
         )}

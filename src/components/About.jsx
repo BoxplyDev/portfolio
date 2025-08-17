@@ -40,7 +40,9 @@ export default function About() {
 
           {[
             "I started out experimenting with Unity & Unreal Engine, trying to recreate the games I loved as a kid. That led me into a world of programming, creativity, and curiosity.",
-            "Today, I focus on building immersive experiences — games, tools, and appealing front-end interfaces — that feel alive and thoughtfully designed.",
+            "Alongside my projects, I studied Computer Science in school and completed my A-Levels in the subject. Now I’m pursuing a Bachelor’s degree in Computer Science & Engineering, pushing further into the field.",
+            "I’m especially drawn to the concepts of Artificial Intelligence — the way machines can learn, adapt, and replicate human behavior. It’s an area I want to branch into more deeply as I continue my journey.",
+            "Today, I focus on building immersive experiences — games, tools, and appealing front-end interfaces — that feel alive and aesthetically designed.",
             "This whole coding journey began for me when I was 13. I like to think that I racked up quite a bit of experience in the field — ready to use it for you.",
           ].map((text, i) => (
             <motion.p
